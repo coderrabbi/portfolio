@@ -4,19 +4,19 @@
   text-align: center;
   padding-top: 50px;
 }
-.notFound-container img {
+.notFound {
   width: 1000px;
   height: 300px;
 }
 
 @media only screen and (max-width: 1080px) {
-  .notFound-container img {
+  .notFound {
     width: 600px;
     height: 200px;
   }
 }
 @media only screen and (max-width: 650px) {
-  .notFound-container img {
+  .notFound {
     width: 300px;
     height: 200px;
   }
