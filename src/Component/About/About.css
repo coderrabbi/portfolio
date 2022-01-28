@@ -1,0 +1,133 @@
+.about-card {
+  /* width: 1000px; */
+  display: flex;
+  /* margin: 0 auto; */
+
+  box-shadow: 0 0 20px -2px #1f2235;
+  margin-bottom: 50px;
+}
+.about-profile {
+  width: 50%;
+}
+.about-profile-pic {
+  height: 100%;
+  background-image: url("../../assets/images/rabbi.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.about-details {
+  width: 48%;
+  padding: 30px;
+  font-size: 12px;
+  text-align: justify;
+  color: #212529;
+}
+.info-list {
+  display: flex;
+  align-items: center;
+}
+.about-highlight {
+  margin-top: 85px;
+  margin-bottom: 20px;
+}
+.about-highlight h3 {
+  font-size: 16px;
+  color: var(--sec-color);
+}
+.info-list span {
+  height: 10px;
+  width: 10px;
+  background: var(--primary-color);
+  border-radius: 5px;
+  margin-bottom: 18px;
+  margin-right: 10px;
+}
+.about-btn {
+  margin-top: 50px;
+}
+
+.about-hire-btn {
+  background: var(--sec-color) !important;
+  font-size: 12px !important;
+  border: 2px solid #ff5823 !important;
+  border-radius: 50px !important;
+  padding: 14px 0 !important;
+  width: 160px !important;
+  cursor: pointer !important;
+  transition: 0.2s !important;
+  font-size: 12px !important;
+}
+.about-resume-btn {
+  border-radius: 50px !important;
+  padding: 14px 0 !important;
+  width: 160px !important;
+  cursor: pointer !important;
+  border: 2px solid var(--sec-color) !important;
+  transition: 0.2s !important;
+  font-size: 12px !important;
+  background: var(--primary-color) !important;
+  margin-left: 50px !important;
+}
+
+/* responsive */
+@media only screen and (max-width: 1000px) {
+  .about-card {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-profile {
+    display: none;
+  }
+  .about-details {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-info-list {
+    text-align: center;
+    width: 50%;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 780px) {
+  .about-info-list {
+    width: 70%;
+  }
+  .about-btn {
+    margin-top: 20px;
+  }
+  .about-btn button {
+    width: 150px !important;
+    padding: 10px !important;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .about-info-list {
+    width: 100%;
+  }
+  .about-hire-btn {
+    width: 100px !important;
+  }
+  .about-resume-btn {
+    margin-left: 15px !important;
+    width: 100px !important;
+  }
+}
+@media only screen and (max-width: 398px) {
+  .about-details {
+    padding: 20px;
+  }
+  .about-info-list {
+    width: 100%;
+  }
+  .about-hire-btn {
+    width: 100px !important;
+    margin-bottom: 10px !important;
+    margin-left: 10px !important;
+  }
+  .about-resume-btn {
+    margin-left: 10px !important;
+    width: 100px !important;
+  }
+}

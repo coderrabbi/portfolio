@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.nav__bar {
+  background-color: #24263b;
+  height: 80px;
+  position: relative;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  font-size: 16px;
+  top: 0;
+}
+.nav__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.nav__logo a {
+  font-size: 40px;
+  color: var(--dark-orange);
+  text-decoration: none;
+}
+.nav__logo a:hover {
+  color: var(--dark-orange);
+  text-decoration: none;
+}
+
+.main-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin-right: 2rem;
+}
+.navlink__container ul {
+  margin: 0 !important;
+}
+
+.nav-links {
+  color: #fff;
+  text-decoration: none;
+  padding: 7px;
+  height: 100%;
+
+  border-bottom: 3px solid transparent;
+}
+.nav-item a:hover {
+  color: var(--dark-orange);
+}
+.fa-code {
+  margin-left: 1rem;
+}
+
+.nav-item {
+  line-height: 40px;
+  margin-right: 1rem;
+}
+.nav-item:after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width 0.7s ease, background-color 0.5s ease;
+}
+
+.nav-item:hover:after {
+  width: 100%;
+  background: var(--dark-orange);
+}
+
+.nav-item .active {
+  color: var(--dark-orange);
+  border-bottom: 3px solid var(--dark-orange);
+}
+
+.nav-icon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-top: 3px solid var(--dark-orange);
+    position: absolute;
+    top: 80px;
+    left: -110%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+  ul.nav-menu a {
+    font-size: 16px !important;
+  }
+  .nav-menu.active {
+    background: #24263b;
+    left: 0px;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+  .nav-item .active {
+    color: var(--dark-orange);
+    border: none;
+  }
+  .nav-links {
+    padding: 1.5rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-icon {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    transform: translate(-100%, 60%);
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--dark-orange);
+    justify-content: center;
+    align-items: center;
+  }
+}

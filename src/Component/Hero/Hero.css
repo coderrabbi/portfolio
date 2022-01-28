@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.hero {
+  height: 100vh;
+  background-color: #24263b;
+}
+.herotype h1 {
+  font-family: "Orbitron" !important;
+  font-size: 30px;
+}
+.personalContect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+  position: relative;
+}
+.personalText {
+  width: 50%;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+  font-size: 35px;
+}
+.personalSocial a {
+  color: white;
+  font-size: 28px;
+  padding: 7px;
+  text-align: center;
+}
+.personalName span {
+  font-size: 25px;
+}
+.highlightTxt {
+  color: #ff5823;
+}
+.short {
+  font-size: 29px;
+
+  font-weight: 400;
+  margin: 20px 10px 0;
+}
+.profileBtn button {
+  border-radius: 50px;
+  padding: 14px 0;
+  width: 160px;
+  cursor: pointer;
+  transition: 0.2s;
+  margin-top: 30px;
+}
+.hireBtn {
+  background: transparent !important;
+  border: 2px solid #ff5823 !important;
+  margin-right: 20px;
+}
+.hireBtn:hover {
+  background: transparent !important;
+  border-color: #fff !important;
+  color: #ff5823 !important;
+}
+.resumeBtn {
+  background: #ff5829 !important;
+  border: 2px solid #ff5829 !important;
+}
+.resumeBtn:hover {
+  background: transparent !important;
+  color: #f15823;
+  border-color: #fff !important;
+}
+.profile {
+  width: 50%;
+}
+.profilePicture {
+  border-radius: 50%;
+  background-image: url("../../assets/images/rabbi.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 350px;
+  height: 350px;
+  margin: 0 auto;
+}
+.profilePicture:hover {
+  transform: scale(1.07);
+  transition: 1s ease-out;
+}
+
+/* shape */
+.shape {
+  padding-top: 90px;
+}
+/* responsive */
+@media only screen and (max-width: 1000px) {
+  .hero {
+    height: 100%;
+  }
+  .personalContect {
+    padding-top: 20px;
+  }
+  .personalSocial a {
+    font-size: 18px;
+  }
+  .profileBtn a button {
+    width: 140px;
+    font-size: 15px;
+    padding: 10px;
+  }
+  .personalContect {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .herotype h1 {
+    font-size: 20px;
+  }
+  .short {
+    font-size: 16px;
+  }
+  .personalText {
+    margin-top: 20px;
+  }
+  .profilePicture {
+    height: 250px;
+    width: 250px;
+  }
+}
+@media only screen and (max-width: 780px) {
+  .hero {
+    height: 102vh;
+  }
+  .personalContect {
+    padding-top: 20px;
+  }
+  .profile {
+    width: 100%;
+  }
+  .personalSocial a {
+    font-size: 18px;
+  }
+  .profileBtn a button {
+    width: 140px;
+    font-size: 14px;
+    padding: 10px;
+  }
+  .herotype h1 {
+    font-size: 18px;
+  }
+  .short {
+    font-size: 16px;
+  }
+  .personalText {
+    margin-top: 20px;
+    width: 100%;
+  }
+  .profilePicture {
+    height: 200px;
+    width: 200px;
+  }
+  .shape {
+    padding-top: 54px;
+  }
+}

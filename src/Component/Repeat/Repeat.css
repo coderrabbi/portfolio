@@ -1,0 +1,32 @@
+.abouthead {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+}
+.abouthead h2 {
+    font-weight: 700;
+    font-size: 32px;
+    color: #1f2235;
+}
+.abouthead span {
+    color: #6e6e6e;
+}
+.separetor {
+    margin-top: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.separetor-line {
+    width: 15%;
+    height: 2px;
+    background-color: #1f221f;
+    margin: 0 auto;
+}
+.separetor-bold {
+    height: 10px;
+    width: 4%;
+    position: absolute;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+}

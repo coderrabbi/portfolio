@@ -1,0 +1,36 @@
+.header-container{
+    background-color: #24263b;
+}
+.header-row{
+    display:flex;
+    height:150px;
+    justify-content:center;
+    align-items:center;
+    /* margin: 0 auto;
+    width:1200px; */
+    background-color: #24263b;
+}
+.logo{
+    width:30%;
+    text-align: center;
+    
+}
+.logo img {
+    height: 65px;
+}
+.headerMenu{
+    width:70%;
+    display:flex;
+    list-style: none;
+    justify-content: center;
+    padding-right: 70px;
+    align-items: center;
+}
+.headerMenu a{
+    text-decoration:none;
+    display:inline-block;
+    padding:20px;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}

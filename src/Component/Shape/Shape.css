@@ -1,0 +1,25 @@
+.shape-container{
+    height:17.8%;
+    width: 100%;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    position: absolute;
+    z-index: 999;
+}
+.shape-parent {
+    width:100%;
+    height: 100%;
+    max-width: 1920px;
+
+}
+.shape-parent img{
+    max-width:100%;
+    height: 130px;
+}
+@media only screen and (max-width:1110px) {
+    .shape-parent{
+        display:flex;
+        align-items: flex-end;
+    }
+}

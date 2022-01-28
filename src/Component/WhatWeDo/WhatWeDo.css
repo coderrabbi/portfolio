@@ -1,0 +1,11 @@
+.cardContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+.cardImage {
+  text-align: center;
+  padding: 20px;
+}
+.cardImage img {
+  height: 100px;
+}
