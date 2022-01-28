@@ -1,5 +1,4 @@
 import React from "react";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Flip from "react-reveal/Flip";
 import {
   CardActionArea,
@@ -34,22 +33,6 @@ const work = [
     backgroundColor: "#2a3443",
   },
 ];
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: "#ffffff",
-    },
-    secondary: {
-      main: "#eceb98",
-    },
-    white: {
-      main: "#fff",
-    },
-    black: {
-      main: "#ddd",
-    },
-  },
-});
 const WhatWeDo = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
