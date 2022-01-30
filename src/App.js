@@ -6,10 +6,12 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Blog from "./Component/Blog/Blog";
 // import Contact from "./Component/Contact/Contact";
 import Notfound from "./Component/NotFoundPage/Notfound";
+import AnimatedCursor from "react-animated-cursor";
 
 function App() {
   return (
     <Router>
+      <AnimatedCursor />
       <Navbar></Navbar>
       <Switch>
         <Route exact path="/">

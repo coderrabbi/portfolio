@@ -1,5 +1,6 @@
 import React from "react";
 import Flip from "react-reveal/Flip";
+
 import {
   CardActionArea,
   CardContent,
@@ -10,6 +11,7 @@ import {
 } from "@mui/material";
 import "./WhatWeDo.css";
 import { Col, Row } from "react-bootstrap";
+import Repeat from "../Repeat/Repeat";
 
 const work = [
   {
@@ -40,6 +42,7 @@ const WhatWeDo = () => {
       <Container className="what">
         <Row>
           <Col md={12}>
+            <Repeat title={"What We Do"}></Repeat>
             <Box sx={{ flexGrow: 3 }} className="box-f">
               {work.map((crd) => {
                 return (

@@ -82,7 +82,7 @@
 
 .nav-item .active {
   color: var(--dark-orange);
-  border-bottom: 3px solid var(--dark-orange);
+  /* border-bottom: 3px solid var(--dark-orange); */
 }
 
 .nav-icon {

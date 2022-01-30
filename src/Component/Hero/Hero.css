@@ -159,12 +159,26 @@ p.styles_typicalWrapper__1_Uvh {
     height: 250px;
     width: 250px;
   }
+  .shape {
+    padding-top: 72px;
+  }
 }
 @media only screen and (max-width: 780px) {
   .personalSocial {
+    background: #dddddd17;
     display: flex;
     justify-content: center;
-    background: #ddd;
+    width: 50%;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+  .socialIcon {
+    margin-bottom: 0px;
+    padding: 7px 5px;
+  }
+
+  g.social-svg-icon {
+    fill: white !important;
   }
   .social {
     display: none;
@@ -201,7 +215,7 @@ p.styles_typicalWrapper__1_Uvh {
     width: 200px;
   }
   .shape {
-    padding-top: 54px;
+    padding-top: 72px;
   }
 }
 @media only screen and (max-width: 240px) {
@@ -209,6 +223,12 @@ p.styles_typicalWrapper__1_Uvh {
     height: 150px;
     width: 150px;
   }
+  .personalSocial {
+    width: 50%;
+  }
 }
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 500px) {
+  .personalSocial {
+    width: 250px;
+  }
 }
