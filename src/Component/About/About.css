@@ -1,3 +1,8 @@
+@font-face {
+  font-family: eurostileExtended;
+  src: url(../../font/EurostileExtended.ttf);
+}
+
 .about-card {
   /* width: 1000px; */
   display: flex;
@@ -34,6 +39,11 @@
 .about-highlight h3 {
   font-size: 16px;
   color: var(--sec-color);
+  font-family: eurostileExtended;
+}
+.about-description {
+  font-family: eurostileBold;
+  font-size: 15px;
 }
 .info-list span {
   height: 10px;
@@ -42,6 +52,7 @@
   border-radius: 5px;
   margin-bottom: 18px;
   margin-right: 10px;
+  font-family: eurostileBold;
 }
 .about-btn {
   margin-top: 50px;
@@ -57,6 +68,7 @@
   cursor: pointer !important;
   transition: 0.2s !important;
   font-size: 12px !important;
+  font-family: eurostileBold;
 }
 .about-resume-btn {
   border-radius: 50px !important;
@@ -68,6 +80,7 @@
   font-size: 12px !important;
   background: var(--primary-color) !important;
   margin-left: 50px !important;
+  font-family: eurostileBold;
 }
 
 /* responsive */

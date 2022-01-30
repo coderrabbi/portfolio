@@ -6,7 +6,9 @@ import { Link } from "react-router-dom";
 import shape from "../../assets/hero/images.svg";
 import WhatWeDo from "../WhatWeDo/WhatWeDo";
 import Fade from "react-reveal/Fade";
+
 import { SocialIcon } from "react-social-icons";
+
 // import Particles from "react-particles-js";
 
 const Hero = () => {
