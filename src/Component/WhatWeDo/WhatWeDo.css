@@ -1,6 +1,10 @@
+.whatWeDo {
+  background: #fff;
+}
 .cardContainer {
   display: flex;
   justify-content: space-evenly;
+  background-color: red;
 }
 .cardImage {
   text-align: center;
@@ -8,4 +12,17 @@
 }
 .cardImage img {
   height: 100px;
+}
+.box-f {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+}
+
+@media (max-width: 700px) {
+  .box-f {
+    grid-template-columns: repeat(1, 3fr);
+    grid-gap: 1rem;
+    margin: 0 auto;
+  }
 }

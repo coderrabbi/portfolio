@@ -4,7 +4,7 @@ import Hero from "./Component/Hero/Hero";
 import Navbar from "./Component/Navbar/Navbar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Blog from "./Component/Blog/Blog";
-import Contact from "./Component/Contact/Contact";
+// import Contact from "./Component/Contact/Contact";
 import Notfound from "./Component/NotFoundPage/Notfound";
 
 function App() {
@@ -21,9 +21,9 @@ function App() {
         <Route exact path="/blog">
           <Blog />
         </Route>
-        <Route exact path="/contact">
+        {/* <Route exact path="/contact">
           <Contact />
-        </Route>
+        </Route> */}
         <Route path="*">
           <Notfound />
         </Route>

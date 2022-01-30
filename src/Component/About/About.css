@@ -77,7 +77,9 @@
     flex-direction: column;
   }
   .about-profile {
-    display: none;
+    height: 515px;
+    width: 516px;
+    margin: 0 auto;
   }
   .about-details {
     width: 100%;
@@ -97,6 +99,11 @@
   .about-btn {
     margin-top: 20px;
   }
+  .about-profile {
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+  }
   .about-btn button {
     width: 150px !important;
     padding: 10px !important;
@@ -105,6 +112,11 @@
 @media only screen and (max-width: 450px) {
   .about-info-list {
     width: 100%;
+  }
+  .about-profile {
+    height: 250px;
+    width: 250px;
+    margin: 0 auto;
   }
   .about-hire-btn {
     width: 100px !important;
@@ -117,6 +129,11 @@
 @media only screen and (max-width: 398px) {
   .about-details {
     padding: 20px;
+  }
+  .about-profile {
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
   }
   .about-info-list {
     width: 100%;

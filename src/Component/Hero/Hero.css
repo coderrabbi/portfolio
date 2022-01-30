@@ -3,12 +3,47 @@
   padding: 0;
   box-sizing: border-box;
 }
+h1 {
+  font-family: "custom";
+}
+@font-face {
+  font-family: "custom";
+  src: url(../../font/EurostileOblique.ttf);
+}
+p.styles_typicalWrapper__1_Uvh {
+  font-family: cursive;
+}
+
 .hero {
-  height: 100vh;
+  height: 600px;
   background-color: #24263b;
+  position: relative;
+}
+.personalSocial {
+  display: none;
+}
+.social {
+  position: fixed;
+  right: 0;
+  background: #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  top: 35%;
+  z-index: 999;
+}
+.socialIcon {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.socialLink :hover {
+  transform: scale(1.1);
+  transition: 1s ease-out;
+}
+.social-icon {
+  overflow: visible !important;
 }
 .herotype h1 {
-  font-family: "Orbitron" !important;
+  font-family: "custom" !important;
   font-size: 30px;
 }
 .personalContect {
@@ -39,7 +74,7 @@
 }
 .short {
   font-size: 29px;
-
+  font-family: "custom";
   font-weight: 400;
   margin: 20px 10px 0;
 }
@@ -126,8 +161,16 @@
   }
 }
 @media only screen and (max-width: 780px) {
+  .personalSocial {
+    display: flex;
+    justify-content: center;
+    background: #ddd;
+  }
+  .social {
+    display: none;
+  }
   .hero {
-    height: 102vh;
+    height: 600px;
   }
   .personalContect {
     padding-top: 20px;
@@ -160,4 +203,12 @@
   .shape {
     padding-top: 54px;
   }
+}
+@media only screen and (max-width: 240px) {
+  .profilePicture {
+    height: 150px;
+    width: 150px;
+  }
+}
+@media only screen and (max-width: 780px) {
 }

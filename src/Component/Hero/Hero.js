@@ -6,33 +6,51 @@ import { Link } from "react-router-dom";
 import shape from "../../assets/hero/images.svg";
 import WhatWeDo from "../WhatWeDo/WhatWeDo";
 import Fade from "react-reveal/Fade";
+import { SocialIcon } from "react-social-icons";
+// import Particles from "react-particles-js";
 
 const Hero = () => {
   const anchorLink = [
     {
       href: "#",
-      cName: "fab fa-facebook",
+      cName: (
+        <SocialIcon network="facebook" style={{ height: 30, width: 30 }} />
+      ),
     },
     {
       href: "#",
-      cName: "fab fa-twitter",
+      cName: <SocialIcon network="twitter" style={{ height: 30, width: 30 }} />,
     },
     {
       href: "#",
-      cName: "fab fa-instagram",
+      cName: (
+        <SocialIcon network="instagram" style={{ height: 30, width: 30 }} />
+      ),
     },
     {
       href: "#",
-      cName: "fab fa-github",
+      cName: <SocialIcon network="github" style={{ height: 30, width: 30 }} />,
     },
     {
       href: "#",
-      cName: "fab fa-youtube",
+      cName: (
+        <SocialIcon network="linkedin" style={{ height: 30, width: 30 }} />
+      ),
     },
   ];
   return (
     <div className="hero">
+      <div className="social">
+        {anchorLink.map((anchorLink) => (
+          <div className="socialIcon">
+            <a href={anchorLink.href} className="socialLink">
+              {anchorLink.cName}
+            </a>
+          </div>
+        ))}
+      </div>
       <Container>
+        {/* <Particles /> */}
         <Row>
           <Col xs={12}>
             <div className="personalContect">
@@ -40,9 +58,11 @@ const Hero = () => {
                 <div className="personalText">
                   <div className="personalSocial">
                     {anchorLink.map((anchorLink) => (
-                      <a href={anchorLink.href}>
-                        <i className={anchorLink.cName}></i>
-                      </a>
+                      <div className="socialIcon">
+                        <a href={anchorLink.href} className="socialLink">
+                          {anchorLink.cName}
+                        </a>
+                      </div>
                     ))}
                   </div>
                   <div className="personalName">
@@ -97,6 +117,7 @@ const Hero = () => {
           </Col>
         </Row>
       </Container>
+
       <div className="shape">
         <img src={shape} alt="" />
       </div>
