@@ -3,6 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+.nav__main {
+  background-color: #24263b;
+  position: fixed;
+  z-index: 11;
+  width: 100%;
+}
 .nav__bar {
   background-color: #24263b;
   height: 80px;
@@ -30,6 +36,7 @@
 
 .main-container {
   position: absolute;
+  display: none;
   top: 0;
   bottom: 0;
   left: 0;
@@ -90,8 +97,12 @@
 }
 
 @media screen and (max-width: 960px) {
-  .nav-menu {
+  .nav__container {
     display: flex;
+    justify-content: flex-start;
+  }
+  .nav-menu {
+    display: none;
     flex-direction: column;
     width: 100%;
     border-top: 3px solid var(--dark-orange);
@@ -122,7 +133,7 @@
   }
 
   .nav-icon {
-    display: flex;
+    display: none;
     position: absolute;
     top: 10px;
     right: 20px;

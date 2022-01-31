@@ -34,8 +34,8 @@ class Header extends React.Component {
   render() {
     // NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling
     return (
-      <div>
-        <Menu>
+      <div className="header__container">
+        <Menu className="mobile-menu">
           {navitems.map((nav) => {
             return (
               <li className="nav-item">

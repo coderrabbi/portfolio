@@ -2,7 +2,9 @@
   font-family: eurostileExtended;
   src: url(../../font/EurostileExtended.ttf);
 }
-
+div#About {
+  margin-top: 60px;
+}
 .about-card {
   /* width: 1000px; */
   display: flex;

@@ -1,12 +1,13 @@
-import React from 'react';
-import Repeat from '../Repeat/Repeat';
+import React from "react";
+import Repeat from "../Repeat/Repeat";
+import "./Blog.css";
 
 const Blog = () => {
-    return (
-        <div>
-            <Repeat title={'Blog'} subHeading={'My Bolg'}></Repeat>
-        </div>
-    );
+  return (
+    <div id="blog">
+      <Repeat title={"Blog"} subHeading={"My Bolg"}></Repeat>
+    </div>
+  );
 };
 
 export default Blog;

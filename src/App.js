@@ -5,22 +5,14 @@ import Navbar from "./Component/Navbar/Navbar";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Blog from "./Component/Blog/Blog";
 import Notfound from "./Component/NotFoundPage/Notfound";
-import AnimatedCursor from "react-animated-cursor";
+
 import Header from "./Component/Header/Header";
+import Cursur from "./Component/Cursur/Cursur";
 
 function App() {
   return (
     <Router>
-      <AnimatedCursor
-        innerSize={10}
-        outerSize={15}
-        color="193, 11, 111"
-        outerAlpha={0.2}
-        innerScale={0.7}
-        outerScale={5}
-        trailingSpeed={10}
-        style={{ zIndex: 9999999999 }}
-      />
+      <Cursur />
       <Navbar style={{ zIndex: 11 }}></Navbar>
       <Header />
 
