@@ -237,9 +237,7 @@ p.styles_typicalWrapper__1_Uvh {
   .personalSocial {
     width: 250px;
   }
-}
-@media only screen and (max-width: 500px) {
-  .personalSocial {
-    width: 250px;
+  .whatWeDo {
+    margin-top: -10px;
   }
 }
