@@ -47,12 +47,16 @@ const About = (props) => {
                     })}
                   </div>
                   <div className="about-btn">
-                    <Link to="#">
-                      <Button className="about-hire-btn">Hire Me</Button>
-                    </Link>
-                    <Link to="#">
-                      <Button className="about-resume-btn">Get Resume</Button>
-                    </Link>
+                    <div className="hire__btn">
+                      <Link to="#">
+                        <Button className="about-hire-btn">Hire Me</Button>
+                      </Link>
+                    </div>
+                    <div className="resume__btn">
+                      <Link to="#">
+                        <Button className="about-resume-btn">Get Resume</Button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>

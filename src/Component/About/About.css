@@ -58,8 +58,9 @@ div#About {
 }
 .about-btn {
   margin-top: 50px;
+  display: flex;
+  justify-content: center;
 }
-
 .about-hire-btn {
   background: var(--sec-color) !important;
   font-size: 12px !important;
@@ -141,7 +142,7 @@ div#About {
     width: 100px !important;
   }
 }
-@media only screen and (max-width: 398px) {
+@media only screen and (max-width: 400px) {
   .about-details {
     padding: 20px;
   }
@@ -161,5 +162,14 @@ div#About {
   .about-resume-btn {
     margin-left: 10px !important;
     width: 100px !important;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .about-btn {
+    display: flex;
+    flex-direction: column !important;
+  }
+  .hire__btn {
+    margin-bottom: 10px !important;
   }
 }

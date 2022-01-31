@@ -127,6 +127,11 @@ p.styles_typicalWrapper__1_Uvh {
 .shape {
   padding-top: 90px;
 }
+
+.whatWeDo {
+  background: #fff;
+  margin-top: -20px;
+}
 /* responsive */
 @media only screen and (max-width: 1000px) {
   .hero {
@@ -185,7 +190,7 @@ p.styles_typicalWrapper__1_Uvh {
     display: none;
   }
   .hero {
-    height: 600px;
+    height: 620px;
   }
   .personalContect {
     padding-top: 20px;
@@ -226,6 +231,11 @@ p.styles_typicalWrapper__1_Uvh {
   }
   .personalSocial {
     width: 50%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .personalSocial {
+    width: 250px;
   }
 }
 @media only screen and (max-width: 500px) {
