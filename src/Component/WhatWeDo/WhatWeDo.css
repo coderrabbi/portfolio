@@ -1,5 +1,6 @@
 .whatWeDo {
-  background: #fff;
+  background: rgb(255, 255, 255);
+  margin-bottom: 50px;
 }
 .cardContainer {
   display: flex;

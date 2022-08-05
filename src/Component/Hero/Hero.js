@@ -4,12 +4,9 @@ import Typical from "react-typical";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import shape from "../../assets/hero/images.svg";
-import WhatWeDo from "../WhatWeDo/WhatWeDo";
 import Fade from "react-reveal/Fade";
 
 import { SocialIcon } from "react-social-icons";
-
-// import Particles from "react-particles-js";
 
 const Hero = () => {
   const anchorLink = [
@@ -52,7 +49,6 @@ const Hero = () => {
         ))}
       </div>
       <Container>
-        {/* <Particles /> */}
         <Row>
           <Col xs={12}>
             <div className="personalContect">
@@ -123,7 +119,7 @@ const Hero = () => {
       <div className="shape">
         <img src={shape} alt="" />
       </div>
-      <WhatWeDo />
+      {/* <WhatWeDo /> */}
     </div>
   );
 };

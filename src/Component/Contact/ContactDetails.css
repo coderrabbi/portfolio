@@ -1,0 +1,42 @@
+.contact__container h1,
+h2,
+h3,
+h4,
+p,
+a {
+  font-family: "eurostileBold";
+}
+
+.contact__container.container {
+  padding: 50px 25px;
+}
+.contact-details {
+  background: #ff5823;
+  border-radius: 10px;
+  padding: 0 40px 50px;
+}
+.contact__details__subtittle {
+  font-size: 14px;
+  color: #ffffffd6;
+  padding: 10px 0;
+  font-weight: 400;
+}
+.details__title h1 {
+  font-size: 30px;
+  padding-top: 20px;
+  color: white;
+}
+
+.contact__details__list {
+  list-style: none;
+  color: #fff;
+}
+.contact__details__list li {
+  padding: 20px 0;
+  font-family: "eurostileBold";
+}
+.contact__details__social {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 50px 15px 25px;
+}

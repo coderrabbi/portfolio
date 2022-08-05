@@ -22,7 +22,7 @@ const navitems = [
     to: "/blog",
   },
   {
-    item: "Contact Us",
+    item: "Contact",
     to: "/contact",
   },
 ];

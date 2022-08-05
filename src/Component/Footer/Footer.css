@@ -1,0 +1,14 @@
+.footer__container {
+  padding: 5px;
+  background-color: #24263b;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+p.copyRight {
+  text-align: center;
+  margin: 0;
+  font-size: 15px;
+  color: #fff;
+  padding: 7px;
+}

@@ -1,168 +1,221 @@
-import React, { useRef } from "react";
-import { Card, CardContent, Grid } from "@mui/material";
-import "./Form.css";
-import useForm from "./useForm";
-import Input from "./Controls/Input";
-import SubmitButton from "./SubmitButton";
-import SendIcon from "@mui/icons-material/Send";
-import AutorenewIcon from "@mui/icons-material/Autorenew";
-import emailjs from "emailjs-com";
+/* eslint-disable jsx-a11y/anchor-is-valid */
+import React, { useState } from "react";
+import Swal from "sweetalert2";
 
-const initialFValues = {
-  id: 0,
-  fname: "",
-  lname: "",
-  email: "",
-  phone: "",
-  message: "",
-  isPermanent: false,
-};
+import TextField from "@mui/material/TextField";
+import "./ContactForm.css";
 
 const ContactForm = () => {
-  const form = useRef();
+  const [user, setUser] = useState({
+    fname: "",
+    lname: "",
+    email: "",
+    number: "",
+    messege: "",
+    Logo: "",
+    WebDesign: "",
+    WebDevelopment: "",
+    Other: "",
+  });
 
-  const {
-    values,
-    // setValues,
-    errors,
-    setErrors,
-    handleInputChange,
-    handleReset,
-  } = useForm(initialFValues);
+  let name, value;
+  const getUserData = (event) => {
+    name = event.target.name;
+    value = event.target.value;
 
-  const validate = () => {
-    let temp = {};
-    temp.fname = values.fname ? "" : "This field is required.";
-    temp.lname = values.lname ? "" : "This field is required.";
-    temp.email =
-      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-        values.email
-      )
-        ? ""
-        : "Please enter a valid email address.";
-    temp.message = values.message ? "" : "This field is required.";
-    temp.phone = values.phone ? "" : "This field is required.";
-    setErrors({
-      ...temp,
-    });
-    return Object.values(temp).every((x) => x === "");
+    setUser({ ...user, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const submitData = async (e) => {
     e.preventDefault();
-    if (validate()) {
-      emailjs
-        .sendForm(
-          "service_cpinffa",
-          "template_09ub39w",
-          form.current,
-          "user_deyQfIM8xiaoCzsJApXP2"
-        )
-        .then((res) => {
-          console.alert("message send sucessfull");
-        })
-        .catch((err) => {
-          console.log(err);
+    const {
+      fname,
+      lname,
+      email,
+      number,
+      messege,
+      Logo,
+      WebDesign,
+      WebDevelopment,
+      Other,
+    } = user;
+    if (
+      fname &&
+      lname &&
+      email &&
+      number &&
+      messege
+      // Logo &&
+      // WebDesign &&
+      // WebDevelopment &&
+      // Other
+    ) {
+      const res = await fetch(
+        "https://portfolio-contact-787-default-rtdb.firebaseio.com/userDara.json",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            fname,
+            lname,
+            email,
+            number,
+            messege,
+            Logo,
+            WebDesign,
+            WebDevelopment,
+            Other,
+          }),
+        }
+      );
+
+      if (res) {
+        setUser({
+          fname: "",
+          lname: "",
+          email: "",
+          number: "",
+          messege: "",
+          Logo: "",
+          WebDesign: "",
+          WebDevelopment: "",
+          Other: "",
         });
-      handleReset();
+        Swal.fire({
+          icon: "success",
+          title: "Submitted Successfully",
+          text: "",
+        });
+      }
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Please Fill The Feild",
+        text: "",
+      });
     }
   };
 
   return (
-    <div className="form__container">
-      <Card className="form__card">
-        <CardContent>
-          <form ref={form} children onSubmit={handleSubmit}>
-            <Grid container spacing={1}>
-              <Grid xs={12} sm={6} item>
-                <Input
-                  name="fname"
-                  label="First Name"
-                  value={values.fname}
-                  onChange={handleInputChange}
-                  variant="standard"
-                  fullWidth
-                  required
-                  error={errors.fname}
-                />
-              </Grid>
-              <Grid xs={12} sm={6} item>
-                <Input
-                  label="Last Name"
-                  name="lname"
-                  variant="standard"
-                  onChange={handleInputChange}
-                  value={values.lname}
-                  error={errors.lname}
-                />
-              </Grid>
-              <Grid xs={12} item>
-                <Input
-                  type="email"
-                  label="Email"
-                  name="email"
-                  variant="standard"
-                  onChange={handleInputChange}
-                  value={values.email}
-                  error={errors.email}
-                />
-              </Grid>
-              <Grid xs={12} item>
-                <Input
-                  type="number"
-                  label="Phone"
-                  name="phone"
-                  variant="standard"
-                  onChange={handleInputChange}
-                  value={values.phone}
-                  error={errors.phone}
-                />
-              </Grid>
-              <Grid xs={12} item>
-                <Input
-                  label="Message"
-                  name="message"
-                  multiline="true"
-                  rows={4}
-                  placeholder="Type your message here"
-                  variant="standard"
-                  onChange={handleInputChange}
-                  value={values.message}
-                  error={errors.message}
-                />
-              </Grid>
-              <Grid xs={12} item>
-                <div className="formBtn">
-                  <SubmitButton
-                    type="submit"
-                    color="primary"
-                    text="Submit"
-                    className="submitBtn"
-                    icon={
-                      <SendIcon
-                        className="send__icon"
-                        style={{ color: "#ffc300" }}
-                      />
-                    }
-                  ></SubmitButton>
-                  <SubmitButton
-                    type="reset"
-                    text="Reset"
-                    className="resetBtn submitBtn"
-                    icon={
-                      <AutorenewIcon
-                        className="reset__icon "
-                        style={{ color: "#ffc300" }}
-                      />
-                    }
-                    onClick={handleReset}
-                  />
-                </div>
-              </Grid>
-            </Grid>
-          </form>
-        </CardContent>
-      </Card>
+    <div className="contact__form">
+      <div className="contact__form__container">
+        <form action="" method="POST">
+          <div className="contact__name">
+            <TextField
+              id="filled-basic"
+              label="First Name"
+              variant="filled"
+              color="warning"
+              type="text"
+              name="fname"
+              value={user.fname}
+              onChange={getUserData}
+              autoComplete="off"
+              required
+            />
+
+            <TextField
+              id="filled-basic"
+              label="last name"
+              variant="filled"
+              color="warning"
+              type="text"
+              name="lname"
+              value={user.lname}
+              onChange={getUserData}
+              autoComplete="off"
+              required
+            />
+          </div>
+          <div className="email__phone">
+            <TextField
+              id="filled-basic"
+              label="Email"
+              variant="filled"
+              color="warning"
+              type="email"
+              name="email"
+              value={user.email}
+              onChange={getUserData}
+              autoComplete="off"
+              required
+            />
+
+            <TextField
+              id="standard-number"
+              label="Number"
+              type="number"
+              InputLabelProps={{
+                shrink: true,
+              }}
+              variant="filled"
+              color="warning"
+              name="number"
+              value={user.number}
+              onChange={getUserData}
+              autoComplete="off"
+              required
+            />
+          </div>
+          <div className="what__you__want">
+            <p>What the of website do you need?</p>
+            <div className="contat__checkbox">
+              <input
+                type="checkbox"
+                onClick={getUserData}
+                name="Web Design"
+                value={user.WebDesign}
+              />
+              <label htmlFor="checkbox">Web Design</label>
+
+              <input
+                type="checkbox"
+                onClick={getUserData}
+                name="Web Development"
+                value={user.WebDevelopment}
+              />
+              <label htmlFor="checkbox">Web Development</label>
+
+              <input
+                type="checkbox"
+                onClick={getUserData}
+                name="Logo"
+                value={user.Logo}
+              />
+              <label htmlFor="checkbox">Logo</label>
+
+              <input
+                type="checkbox"
+                onClick={getUserData}
+                name="Other"
+                value={user.Other}
+              />
+              <label htmlFor="checkbox">Other</label>
+            </div>
+          </div>
+          <div className="contact__textarea">
+            <TextField
+              id="filled-basic"
+              label="Write Your Messege"
+              variant="filled"
+              color="warning"
+              name="messege"
+              value={user.messege}
+              onChange={getUserData}
+              multiline
+              rows={4}
+            />
+          </div>
+
+          <div className="contact__submit__button">
+            <a href="">
+              <button onClick={submitData}>Sent Messege</button>
+            </a>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
