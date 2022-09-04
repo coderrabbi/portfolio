@@ -1,4 +1,4 @@
-import React,  from "react";
+import React from "react";
 import Repeat from "../Repeat/Repeat";
 import "./Blog.css";
 
