@@ -1,4 +1,4 @@
-import React from "react";
+import { React } from "react";
 import "./Hero.css";
 import Typical from "react-typical";
 import { Button, Col, Container, Row } from "react-bootstrap";
